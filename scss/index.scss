@@ -171,6 +171,11 @@
         box-shadow: 0 0 10px rgba(black, 0.2);
         border-radius: 3px;
         overflow: hidden;
+        display: none;
+        transition: 0.3s;
+        &.active{
+          display: block;
+        }
         &:hover{
           .thumb{
             .hover-back{
@@ -286,7 +291,7 @@
       .modal{
         max-width: 1280px;
         width: 90%; max-height: 0;
-        overflow: scroll;
+        overflow-y: scroll;
         position: fixed;
         left: 50%; top: 50%;
         transform: translate(-50%, -50%);
@@ -296,13 +301,26 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 30px;
         transition: 0.3s;
         &.active{
           padding: 100px 0;
           max-height: 90vh;
         }
         >div{
+          .part-wrap{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 50px;
+            .part-title{
+              border: 1px solid $modal-font-color;
+              border-radius: 3px;
+              padding: 10px 15px;
+              margin: 10px 0;
+              font-weight: bold;
+            }
+          }
           >p{
             font-size: 0.9rem;
           }
@@ -346,6 +364,7 @@
 }
 /* ------- contact ------- */
 #contact {
+  transition: 0.3s;
   .inner{
     text-align: center;
     .title{

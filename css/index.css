@@ -266,6 +266,12 @@ ul, ol, li {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   overflow: hidden;
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#project .inner .card-wrap .card.active {
+  display: block;
 }
 #project .inner .card-wrap .card:hover .thumb .hover-back {
   opacity: 1;
@@ -407,7 +413,7 @@ ul, ol, li {
   max-width: 1280px;
   width: 90%;
   max-height: 0;
-  overflow: scroll;
+  overflow-y: scroll;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -426,13 +432,31 @@ ul, ol, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 25px;
+  gap: 30px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 #project .inner .modal-wrap .modal.active {
   padding: 100px 0;
   max-height: 90vh;
+}
+#project .inner .modal-wrap .modal > div .part-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+}
+#project .inner .modal-wrap .modal > div .part-wrap .part-title {
+  border: 1px solid #555555;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  font-weight: bold;
 }
 #project .inner .modal-wrap .modal > div > p {
   font-size: 0.9rem;
@@ -473,6 +497,10 @@ ul, ol, li {
 }
 
 /* ------- contact ------- */
+#contact {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 #contact .inner {
   text-align: center;
 }
