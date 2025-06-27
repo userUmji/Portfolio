@@ -253,7 +253,7 @@ ul, ol, li {
   height: 45px;
   font-size: 1rem;
   border-radius: 3px;
-  border: 1px solid #DBDBDB;
+  border: 1px solid #dbdbdb;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -283,10 +283,6 @@ ul, ol, li {
 #project .inner .card-wrap .card.active {
   display: block;
 }
-#project .inner .card-wrap .card:hover .thumb .hover-back {
-  opacity: 1;
-  gap: 10px;
-}
 #project .inner .card-wrap .card.team .thumb::after {
   content: "Team";
   background-color: #FAD9D9;
@@ -313,6 +309,10 @@ ul, ol, li {
   text-align: center;
   line-height: 30px;
   font-size: 0.8rem;
+}
+#project .inner .card-wrap .card .thumb:hover .hover-back {
+  opacity: 1;
+  gap: 10px;
 }
 #project .inner .card-wrap .card .thumb img {
   width: 100%;
@@ -372,7 +372,7 @@ ul, ol, li {
 }
 #project .inner .card-wrap .card .desc-wrap .text-wrap .type {
   font-size: 0.83rem;
-  color: #BFBFBF;
+  color: #bfbfbf;
 }
 #project .inner .card-wrap .card .desc-wrap .bottom-wrap {
   display: -webkit-box;
@@ -392,15 +392,26 @@ ul, ol, li {
   width: 20px;
   vertical-align: bottom;
 }
-#project .inner .card-wrap .card .desc-wrap .bottom-wrap .view-details-btn {
-  padding: 8px 15px;
+#project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+#project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap .view-details-btn, #project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap a {
+  display: block;
+  font-size: 0.8rem;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
   border-radius: 3px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   color: #555555;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-#project .inner .card-wrap .card .desc-wrap .bottom-wrap .view-details-btn:hover {
+#project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap .view-details-btn:hover, #project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap a:hover {
   border-color: transparent;
   background-color: #ebebeb;
   color: black;
@@ -463,8 +474,7 @@ ul, ol, li {
   gap: 20px;
 }
 #project .inner .modal-wrap .modal > div .part-wrap .part-title {
-  border: 1px solid #555555;
-  border-radius: 3px;
+  border-bottom: 1px solid #555555;
   padding: 10px 15px;
   margin: 10px 0;
 }
@@ -476,6 +486,7 @@ ul, ol, li {
   color: black;
 }
 #project .inner .modal-wrap .modal .modal-sub-title {
+  color: black;
   font-size: 1.1rem;
 }
 #project .inner .modal-wrap .modal .planning-intent {
@@ -491,7 +502,14 @@ ul, ol, li {
   line-height: 40px;
   border-radius: 3px;
   color: #555555;
-  border: 1px solid #555555;
+  border: 1px solid #4671FF;
+  color: #4671FF;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+#project .inner .modal-wrap .modal > a:hover {
+  background-color: #4671FF;
+  color: white;
 }
 #project .inner .modal-wrap .modal .close-btn {
   position: sticky;
