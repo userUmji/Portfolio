@@ -64,7 +64,7 @@ ul, ol, li {
 .header nav ul {
   position: relative;
   max-width: 500px;
-  width: 100%;
+  width: 90%;
   height: 60px;
   margin: auto;
   background-color: #4671FF;
@@ -77,7 +77,6 @@ ul, ol, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px;
   border-radius: 3px;
 }
 .header nav ul li a {

@@ -64,9 +64,9 @@ category_btns.forEach((category_btn) => {
   })
 })
 
-let navigation = document.querySelector(".navigation");
 let navigation_li = document.querySelectorAll(".navigation > li > a");
 
+// 네비게이션 클릭해면 active 클래스 추가
 navigation_li.forEach(nav_li => {
   nav_li.addEventListener("click",()=>{
     for(nl of navigation_li){
@@ -81,10 +81,11 @@ document.addEventListener("scroll", () => {
   let about = document.getElementById("about").offsetTop;
   let project = document.getElementById("project").offsetTop;
   let contact = document.getElementById("contact").offsetTop;
+  // active클래스 초기화
   for(nl of navigation_li){
     nl.classList.remove("active");
   }
-  // 스크롤 위치
+  // 스크롤 위치 에따라 네비게이션에 active클래스 추가
   let scroll_y = window.scrollY;
   if (scroll_y > contact + -500) {
     navigation_li[2].classList.add("active");

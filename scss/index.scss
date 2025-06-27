@@ -11,14 +11,13 @@
     ul {
       position: relative;
       max-width: 500px;
-      width: 100%;
+      width: 90%;
       height: 60px;
       margin: auto;
       background-color: $main-color;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 30px;
       border-radius: 3px;
       li {
         a {
