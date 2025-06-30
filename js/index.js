@@ -64,6 +64,7 @@ category_btns.forEach((category_btn) => {
   })
 })
 
+// 네비게이션
 let navigation_li = document.querySelectorAll(".navigation > li > a");
 
 // 네비게이션 클릭해면 active 클래스 추가
@@ -96,4 +97,13 @@ document.addEventListener("scroll", () => {
   else if (scroll_y > about + -300) {
     navigation_li[0].classList.add("active");
   }
+
+  if(scroll_y > 200){
+    top_btn.classList.add("active");
+  }
+  else{
+    top_btn.classList.remove("active");
+  }
 })
+
+let top_btn = document.querySelector(".top-btn");

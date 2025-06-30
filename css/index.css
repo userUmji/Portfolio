@@ -405,15 +405,26 @@ ul, ol, li {
   text-align: center;
   line-height: 35px;
   border-radius: 3px;
-  border: 1px solid #d9d9d9;
-  color: #555555;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-#project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap .view-details-btn:hover, #project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap a:hover {
+#project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap a {
+  color: #555555;
+  border: 1px solid #d9d9d9;
+}
+#project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap a:hover {
   border-color: transparent;
   background-color: #ebebeb;
   color: black;
+}
+#project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap .view-details-btn {
+  background-color: transparent;
+  color: #4671FF;
+  border: 1px solid #4671FF;
+}
+#project .inner .card-wrap .card .desc-wrap .bottom-wrap .btn-wrap .view-details-btn:hover {
+  background-color: #4671FF;
+  color: white;
 }
 #project .inner .modal-wrap {
   position: fixed;
@@ -425,6 +436,8 @@ ul, ol, li {
   pointer-events: none;
   z-index: 10;
   opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 #project .inner .modal-wrap.active {
   opacity: 1;
@@ -616,6 +629,12 @@ ul, ol, li {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: white;
   z-index: 2;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.top-btn.active {
+  opacity: 1;
 }
 .top-btn:hover i {
   -webkit-animation: move-to-top 1s linear infinite both;

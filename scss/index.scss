@@ -296,13 +296,24 @@
                 text-align: center;
                 line-height: 35px;
                 border-radius: 3px;
-                border: 1px solid #d9d9d9;
+                transition: 0.3s;    
+              }
+              a{
                 color: $modal-font-color;
-                transition: 0.3s;
+                border: 1px solid #d9d9d9;
                 &:hover {
                   border-color: transparent;
                   background-color: #ebebeb;
                   color: black;
+                }
+              }
+              .view-details-btn{
+                background-color: transparent;
+                color: $main-color;
+                border: 1px solid $main-color;
+                &:hover{
+                  background-color: $main-color;
+                  color: white;
                 }
               }
             }
@@ -320,6 +331,7 @@
       pointer-events: none;
       z-index: 10;
       opacity: 0;
+      transition: 0.3s;
       &.active {
         opacity: 1;
         pointer-events: inherit;
@@ -478,6 +490,11 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: white;
   z-index: 2;
+  opacity: 0;
+  transition: 0.3s;
+  &.active{
+    opacity: 1;
+  }
   &:hover {
     i {
       animation: move-to-top 1s linear infinite both;
