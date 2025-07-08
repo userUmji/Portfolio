@@ -59,6 +59,7 @@
     p {
       font-size: 1.1rem;
       color: $main-gray;
+      margin-bottom: 13px;
     }
 
     .download-btn {
@@ -136,6 +137,14 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              &:nth-child(3){
+                img{
+                  width: 40%;
+                }
+              }
+              img{
+                width: 50%;
+              }
             }
           }
         }
@@ -197,7 +206,7 @@
             &::after {
               content: "Team";
               background-color: $team-mark-back-color;
-              color: $team-mark-font-color;
+              color: white;
             }
           }
         }
@@ -205,8 +214,8 @@
           .thumb {
             &::after {
               content: "single";
-              background-color: $single-mark-back-color;
-              color: $main-color;
+              background-color: $main-color;
+              color: white;
             }
           }
         }
@@ -555,6 +564,11 @@
   /* ------- project ------- */
   #project {
     .inner {
+      .title-wrap{
+        & p:nth-of-type(1){
+          display: none;
+        }
+      }
       .modal-wrap {
         .modal {
           .modal-title {

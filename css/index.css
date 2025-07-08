@@ -126,6 +126,7 @@ ul, ol, li {
 .main-visual .inner p {
   font-size: 1.1rem;
   color: #717171;
+  margin-bottom: 13px;
 }
 .main-visual .inner .download-btn {
   font-size: 0.9rem;
@@ -225,6 +226,12 @@ ul, ol, li {
       -ms-flex-pack: center;
           justify-content: center;
 }
+#about .inner .about-wrap .skill-tool-wrap > div .box-wrap > div:nth-child(3) img {
+  width: 40%;
+}
+#about .inner .about-wrap .skill-tool-wrap > div .box-wrap > div img {
+  width: 50%;
+}
 
 /* ------- project ------- */
 #project .inner .title-wrap {
@@ -284,13 +291,13 @@ ul, ol, li {
 }
 #project .inner .card-wrap .card.team .thumb::after {
   content: "Team";
-  background-color: #FAD9D9;
-  color: #DD4A48;
+  background-color: #EF2121;
+  color: white;
 }
 #project .inner .card-wrap .card.single .thumb::after {
   content: "single";
-  background-color: #D9E6FA;
-  color: #4671FF;
+  background-color: #4671FF;
+  color: white;
 }
 #project .inner .card-wrap .card .thumb {
   position: relative;
@@ -721,6 +728,9 @@ ul, ol, li {
             justify-content: center;
   }
   /* ------- project ------- */
+  #project .inner .title-wrap p:nth-of-type(1) {
+    display: none;
+  }
   #project .inner .modal-wrap .modal .modal-title {
     font-size: 1.5rem;
   }

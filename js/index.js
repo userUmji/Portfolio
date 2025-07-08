@@ -76,12 +76,14 @@ navigation_li.forEach(nav_li => {
     nav_li.classList.add("active");
   })
 });
-
+// 탑버튼
+let top_btn = document.querySelector(".top-btn");
 document.addEventListener("scroll", () => {
   // 각 섹션들 위치 가져오기
   let about = document.getElementById("about").offsetTop;
   let project = document.getElementById("project").offsetTop;
   let contact = document.getElementById("contact").offsetTop;
+  
   // active클래스 초기화
   for(nl of navigation_li){
     nl.classList.remove("active");
@@ -98,6 +100,7 @@ document.addEventListener("scroll", () => {
     navigation_li[0].classList.add("active");
   }
 
+  // 스크롤이 어느정도 내려가면 top버튼 활성화
   if(scroll_y > 200){
     top_btn.classList.add("active");
   }
@@ -106,4 +109,3 @@ document.addEventListener("scroll", () => {
   }
 })
 
-let top_btn = document.querySelector(".top-btn");
